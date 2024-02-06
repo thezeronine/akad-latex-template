@@ -1,0 +1,51 @@
+% linked toc
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+
+% biblatex
+\usepackage[
+  backend=biber,
+  style=apa,
+  autocite=footnote,
+  % style=ieee,
+  ibidtracker=constrict
+]{biblatex}
+\addbibresource{literature.bib}
+
+\usepackage{xpatch}
+\xpatchbibdriver{online}
+{\printtext[parens]{\usebibmacro{data}}}
+{\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{data}}}}{}{}
+
+% glossary
+\usepackage[
+  nonumberlist,
+  acronym,
+  toc
+]{glossaries}
+\makenoidxglossaries
+
+% saves current page roman/arabic number
+\usepackage{etoolbox}
+\newcounter{savedpage}
+
+% configure graphicx
+\usepackage{graphicx}
+\graphicspath{{./assets/images}}
+
+% configure SVG
+\usepackage[
+  inkscapepath=svgsubpath
+]{svg}
+\svgpath{{./svg/}}
+
+% Configure Tables
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{lscape}

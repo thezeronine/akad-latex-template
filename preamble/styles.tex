@@ -1,0 +1,37 @@
+\usepackage[
+  top=30mm,
+  bottom=30mm,
+  left=25mm,
+  right=20mm
+]{geometry}
+
+% fonts
+\usepackage{lmodern}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% header and footer
+\usepackage[
+  autooneside=false,
+  automark,
+]{scrlayer-scrpage}
+
+% clear default header and footer
+\clearpairofpagestyles
+
+% set header and footer content
+\ihead{\footnotesize{\textcolor{gray}{\paperHeadnote}}}
+\ofoot{\pagemark}
+
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{5mm}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{section}
+
+% word wrap
+\sloppy

@@ -1,0 +1,61 @@
+\documentclass[
+	12pt,
+	a4paper,
+	oneside,
+	pagesize=auto,	
+  version=last, % Koma Script version
+	toc=listof, % add tables and figures to toc
+  bibliography=totoc % add bibliography to toc
+	]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage[ngerman]{babel}
+
+\input{preamble/styles.tex}
+\input{preamble/config.tex}
+
+\input{preamble/commands.tex}
+
+\input{content/glossary.tex}
+
+\begin{document}
+
+% title page
+\input{preamble/titlepage.tex}
+
+\pagenumbering{Roman}
+
+% ToC etc.
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+%\listoftables
+\clearpage
+
+\setcounter{savedpage}{\value{page}}
+
+\pagenumbering{arabic}
+
+
+% --- LOAD SECTIONS ---
+\input{content/01_introduction}
+\input{content/02_basics}
+\input{content/03_main_topic}
+\input{content/04_summary}
+
+\clearpage
+
+\pagenumbering{Roman}
+\setcounter{page}{\value{savedpage}}
+
+% --- LIST OF REFERENCES ---
+\printbibliography
+\clearpage
+
+% Glossar
+\printnoidxglossaries
+
+\end{document}
