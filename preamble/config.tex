@@ -11,9 +11,9 @@
 % biblatex
 \usepackage[
   backend=biber,
-  style=apa,
-  autocite=footnote,
-  % style=ieee,
+  style=ieee,
+  % style=apa,
+  % autocite=footnote,
   ibidtracker=constrict
 ]{biblatex}
 \addbibresource{literature.bib}
@@ -23,10 +23,12 @@
 {\printtext[parens]{\usebibmacro{data}}}
 {\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{data}}}}{}{}
 
+% acronym
+\usepackage[printonlyused]{acronym}
+
 % glossary
 \usepackage[
   nonumberlist,
-  acronym,
   toc
 ]{glossaries}
 \makenoidxglossaries

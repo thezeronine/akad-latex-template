@@ -5,14 +5,20 @@
   right=20mm
 ]{geometry}
 
-% fonts
-\usepackage{lmodern}
-\usepackage[scaled]{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+% serif font
+\usepackage{bera}
+\addtokomafont{disposition}{\rmfamily}
+
+% sans serif font
+% \usepackage[scaled]{helvet}
+% \renewcommand{\familydefault}{\rmdefault}
 
 % line spacing
 \usepackage{setspace}
 \onehalfspacing
+
+% paragraph indent
+\setlength{\parindent}{25pt}
 
 % header and footer
 \usepackage[

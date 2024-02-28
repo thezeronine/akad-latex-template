@@ -30,9 +30,11 @@
 % ToC etc.
 \tableofcontents
 \clearpage
-\listoffigures
-\clearpage
+% \listoffigures
+% \clearpage
 %\listoftables
+% \clearpage
+\input{content/acronyms}
 \clearpage
 
 \setcounter{savedpage}{\value{page}}
@@ -52,10 +54,11 @@
 \setcounter{page}{\value{savedpage}}
 
 % --- LIST OF REFERENCES ---
+\renewcommand*{\UrlFont}{\rmfamily}
 \printbibliography
-\clearpage
 
 % Glossar
+\newpage
 \printnoidxglossaries
 
 \end{document}
