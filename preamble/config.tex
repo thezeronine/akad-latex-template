@@ -11,10 +11,10 @@
 % biblatex
 \usepackage[
   backend=biber,
-  style=ieee,
-  % style=apa,
-  % autocite=footnote,
-  ibidtracker=constrict
+  style=authoryear-ibid,
+  autocite=footnote,
+  maxnames=4,
+  ibidpage=true,
 ]{biblatex}
 \addbibresource{literature.bib}
 
@@ -41,13 +41,10 @@
 \usepackage{graphicx}
 \graphicspath{{./assets/images}}
 
-% configure SVG
-\usepackage[
-  inkscapepath=svgsubpath
-]{svg}
-\svgpath{{./svg/}}
-
 % Configure Tables
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
 \usepackage{lscape}
+
+% configure colors
+\usepackage{xcolor}
